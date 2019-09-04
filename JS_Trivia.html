@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Trivia Night </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script> 
+
+    $(document).ready(function() {
+        console.log('ready!'); 
+        $(".books0").click(function () { // when this is clicked, run all the code within the block
+        console.log('click'); 
+            $.get("https://opentdb.com/api.php?amount=5&category=10", (books) => {
+					console.log(books)
+					console.log(books.results.length);
+					$(".books0").html(books.results[0].question + '\n');
+				});
+			});
+        }); 
+
+     $(document).ready(function() {
+        console.log('ready!'); 
+        $(".books0").click(function () { // when this is clicked, run all the code within the block
+        console.log('click'); 
+            $.get("https://opentdb.com/api.php?amount=5&category=10", (books) => {
+					console.log(books)
+					console.log(books.results.length);
+					$(".books0").html(books.results[0].question + '\n');
+				});
+			});
+        }); 
+        
+</script>
+</head>
+<body>
+    	<div class="row">
+		<div class="col-3 books0 border border-dark d-inline m-2">
+			<p class="h1">100</p>
+		</div>
+		<div class="col-3 movies0 border border-dark d-inline m-2">
+			<p class="h1">200</p>
+		</div>
+		<div class="col-3"></div>
+    </div>
+    
+    <div class="row">
+		<div class="col-3 books1 border border-dark d-inline m-2">
+			<p class="h1">100</p>
+		</div>
+		<div class="col-3 movies1 border border-dark d-inline m-2">
+			<p class="h1">200</p>
+		</div>
+		<div class="col-3"></div>
+	</div>
+
+
+    
+</body>
+</html>
